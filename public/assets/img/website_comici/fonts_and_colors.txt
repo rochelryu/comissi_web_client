@@ -1,0 +1,14 @@
+FONTS :
+
+Primary-font : Montserrat;
+Secondary-font : Gabriel Weiss' Friends Font;
+
+Body {
+  font-family : 'Montserrat', sans-serif;
+}
+
+
+COLORS :
+
+Primary-color : #242758;
+Secondary-color : #816b3a;

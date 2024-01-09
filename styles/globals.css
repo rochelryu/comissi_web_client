@@ -1,0 +1,35 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200;300;400&family=Montserrat:wght@100;200;300;400;500;600&family=Permanent+Marker&display=swap');
+
+.owl-carousel {
+  display: block;
+}
+.py-15 {
+  padding: 15px 0px;
+}
+.p-b-15 {
+  padding-bottom: 15px;
+}
+.logo-header {
+  width: 70%;
+}
+.marquee {
+    line-height: 50px;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.marquee span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 95s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}

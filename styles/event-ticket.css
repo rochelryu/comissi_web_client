@@ -1,0 +1,19 @@
+.event-ticket {
+    background-color: #131111;
+}
+
+.card-content-ticket h3 {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.img-skew {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    transform: skewY(-3deg);
+    height: 60vh
+}
+.block-event-tiket {
+    width: 70%;
+}

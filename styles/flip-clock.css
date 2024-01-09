@@ -1,0 +1,17 @@
+/* ---------- FLIP CARD ------- */
+.flip-clock {
+    --fcc-flip-duration: 0.5s !important; /* transition duration when flip card */
+    --fcc-digit-block-width: 40px !important; /* width of digit card */
+    --fcc-digit-block-height: 60px !important; /* height of digit card, highly recommend in even number */
+    --fcc-digit-font-size: 30px !important; /* font size of digit */
+    --fcc-digit-color: white !important; /* color of digit */
+    --fcc-label-font-size: 10px !important; /* font size of label */
+    --fcc-label-color: #ffffff !important; /* color of label */
+    --fcc-background: #816b3a !important; /* background of digit card */
+    --fcc-divider-color: transparent !important; /* color of divider */
+    --fcc-divider-height: 1px !important; /* height of divider */
+    --fcc-separator-size: 6px !important; /* size of colon */
+    --fcc-separator-color: transparent !important; /* color of colon */
+  }
+
+/* ---------- !FLIP CARD! ------- */
