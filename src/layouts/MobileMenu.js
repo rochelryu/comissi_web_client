@@ -15,7 +15,7 @@ const MobileMenu = () => {
         <Link href="/competitions">COMPÉTITIONS</Link>
       </li>
       <li>
-        <Link href="/tikets">ÉVENTS ET TICKETS</Link>
+        <Link href="/edition">ÉVENTS</Link>
       </li>
       <li>
         <Link href="/community">COMMUNAUTÉ</Link>

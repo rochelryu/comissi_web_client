@@ -27,10 +27,20 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/competitions": [
+    "/actualities": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/competitions.js"
+      "static/chunks/pages/actualities.js"
+    ],
+    "/details-competitions/[...slug]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/details-competitions/[...slug].js"
+    ],
+    "/details-editions/[slug]": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/details-editions/[slug].js"
     ]
   },
   "ampFirstPages": []

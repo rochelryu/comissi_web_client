@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 import CheckoutFuntion from "../components/CheckoutFuntion";
 import MobileMenu from "./MobileMenu";
 import { useRouter } from 'next/router';
-
+import ConsumApi from '@/src/services_workers/consum_api';
+import { apiUrlAsset } from '@/src/constants/apiUrl';
 const Header = ({ extraClass }) => {
   const router = useRouter();
+  const [allLocality, setAllallLocality] = useState([]);
+
   const [indexActive, setIndexActive] = useState(-1);
 
   useEffect(() => {
@@ -15,7 +18,7 @@ const Header = ({ extraClass }) => {
   const loadData = async () => {
     if(router.pathname.indexOf('competitions') !== -1) {
       setIndexActive(1);
-    } else if(router.pathname.indexOf('ticket') !== -1) {
+    } else if(router.pathname.indexOf('edition') !== -1) {
       setIndexActive(2);
     } else if(router.pathname.indexOf('community') !== -1) {
       setIndexActive(3);
@@ -28,6 +31,8 @@ const Header = ({ extraClass }) => {
     } else {
       setIndexActive(0);
     }
+    const {data:localities} = await ConsumApi.getAllLocality();
+    setAllallLocality(localities);
   }
 
   const onClick = (e) => {
@@ -60,10 +65,17 @@ const Header = ({ extraClass }) => {
                   <Link href="/">ACCUEIL</Link>
                 </li>
                 <li className={`navbar-dropdown ${indexActive === 1 && 'active'}`}>
-                  <Link href="/competitions">COMPÉTITIONS</Link>
+                  <div className="flag-translate">
+                    <Link href="#">COMPÉTITIONS</Link>
+                  </div>
+                  <div className="dropdown">
+                    {
+                      allLocality.map((locality) => (<Link key={locality.id} href={`/competitions/${locality.id}/${locality.nom_departement.toLocaleUpperCase()}`}><span><img src={`${apiUrlAsset.avatars}/${locality.gravatars}`} alt="fr" /> </span> {locality.nom_departement.toLocaleUpperCase()}</Link>))
+                    }
+                  </div>
                 </li>
                 <li className={`navbar-dropdown ${indexActive === 2 && 'active'}`}>
-                  <Link href="/tikets">EVENTS</Link>
+                  <Link href="/edition">EVENTS</Link>
                 </li>
                 <li className={`navbar-dropdown ${indexActive === 3 && 'active'}`}>
                   <Link href="/community">COMMUNAUTÉ</Link>
@@ -74,7 +86,6 @@ const Header = ({ extraClass }) => {
                 <li className={`navbar-dropdown ${indexActive === 5 && 'active'}`}>
                   <Link href="/live">WEBTV</Link>
                 </li>
-                
                 <li className="navbar-dropdown without-style language">
                   <div className="flag-translate">
                     <img src="/assets/img/fr.png" alt="fr"/>

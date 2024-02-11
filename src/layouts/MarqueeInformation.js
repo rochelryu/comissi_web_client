@@ -21,7 +21,7 @@ const MarqueeInformation = () => {
       }}
       >
         <Grid container>
-          <Grid item xs={2} sx={{display: 'flex'}} >
+          <Grid item xs={2} sx={{display: 'flex', backgroundColor: '#a14444', alignItems: 'center', justifyContent: 'center',}} >
             <Typography variant="h6" sx={{color: 'white'}}>BREAKING NEWS</Typography>       
           </Grid>
           <Grid item xs={10} className="marquee" >

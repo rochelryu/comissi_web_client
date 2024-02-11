@@ -13,12 +13,8 @@ export default function Document() {
         {/* favicon end */}
 
         {/* public assets begin */}
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-          crossOrigin="anonymous"
-        />
+
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
 
         <link
           rel="stylesheet"
@@ -35,10 +31,12 @@ export default function Document() {
           media="all"
         />
 
+        
         <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" />
         <link rel="stylesheet" href="/assets/css/owl.theme.default.min.css" />
         <link rel="stylesheet" href="/assets/css/nice-select.css" />
         <link rel="stylesheet" href="/assets/css/aos.css" />
+        {/* <link rel="stylesheet" href="/assets/css/style1.css" /> */}
         <link rel="stylesheet" href="/assets/css/style.css" />
         <link rel="stylesheet" href="/assets/css/responsive.css" />
         <link rel="stylesheet" href="/assets/css/color.css" />

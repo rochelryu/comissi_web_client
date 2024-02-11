@@ -115,23 +115,24 @@ figure {
 }
 .bloc-left-heros {
     border-bottom: 10px solid #e6b454;
-    min-height: 75vh;
+    min-height: 25vh;
     background: rgb(24,96,100);
     background: linear-gradient(169deg, #13575c, #257377);
     min-width: 80%;
     border-radius: 0 0 300px 300px;
     overflow: hidden;
 }
-.title-section {
+.title-section, .titleTyping .titleH1 {
     font-family: 'Permanent Marker', cursive;
     font-weight: 400;
     font-size: 5rem;
     color: white;
     font-style: italic;
 }
-.title-section span {
+.title-section span, .titleTyping .titleH1 .titleSpan {
     color: #e6b454;
     font-weight: bolder;
+    
 }
 .bloc-left-heros img {
     width: 100%;
@@ -173,7 +174,7 @@ figure {
     border: 1px solid white;
     border-radius: 30px;
 }
-.navbar-links li.navbar-dropdown.without-style img {
+.navbar-links li.navbar-dropdown.without-style img, .navbar-links li.navbar-dropdown .dropdown img {
     width: 25px;
 }
 .navbar-links li.navbar-dropdown.without-style span {
@@ -186,6 +187,9 @@ figure {
 }
 .navbar-links li.navbar-dropdown a {
     color: #e0e0e0;
+}
+.navbar-links li.navbar-dropdown .dropdown a {
+    color: #858484;
 }
 .navbar-links li.navbar-dropdown:hover, .navbar-links li.navbar-dropdown.active {
     background-color: rgba(255, 255, 255, 0.15);
@@ -263,7 +267,7 @@ figure {
     left: 0;
     width: 100%;
     height: 30%; /* Hauteur de l'overlay, ajustez selon vos besoins */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(254 234 234) 120%);
 }
 .spacing-3 > * {
     margin: 15px;
@@ -281,7 +285,7 @@ figure {
     top: 0;
     left: 0;
     right: 0;
-    height: 66vh;
+    height: 40vh;
     border-radius: 50px;
     border: 3px solid #e6b454;
 }
@@ -391,9 +395,14 @@ select.nice-select + div.nice-select + div.nice-select {
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
-    min-height: 80vh;
-    border-radius: 50px 50px 0 0;
+    min-height: 50vh;
     position: relative;
+}
+.block-competitions{
+    padding-top: 125px !important;
+}
+.hero-section.radius-section {
+    border-radius: 50px 50px 0 0;
 }
 .hero-section.about.blog-page {
     overflow: initial;
@@ -458,10 +467,9 @@ select.nice-select + div.nice-select + div.nice-select {
     text-transform: uppercase;
     display: inline-block;
     font-size: 16px;
-    padding: 0 55px;
+    padding: 0 25px;
     border-radius: 40px;
-    height: 55px;
-    line-height: 55px;
+    line-height: 35px;
     border: none;
 }
 .button-2 {
@@ -471,7 +479,6 @@ select.nice-select + div.nice-select + div.nice-select {
   background-repeat: no-repeat;
   -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
-  line-height: 51px;
   font-weight: bolder;
 }
 .button-2:hover {
@@ -534,6 +541,7 @@ select.nice-select + div.nice-select + div.nice-select {
 /*--------------       best-restaurants    ----------------*/
 .best-restaurants {
     margin-bottom: 25px;
+    padding-top: 100px;
 }
 .city-restaurants h2 {
     width: 83%;
@@ -545,6 +553,7 @@ select.nice-select + div.nice-select + div.nice-select {
 }
 .cafa h4{
     margin: 0;
+    text-align: center;
 }
 .cafa h4 a{
     font-weight: bold;
@@ -565,23 +574,21 @@ select.nice-select + div.nice-select + div.nice-select {
     color: white;
 }
 .logos-card {
-    display: flex;
-    align-items: start;
     background-color: white;
-    padding: 40px;
+    padding: 15px;
     border-radius: 10px;
 }
-.logos-card img {
+.cover-competition {
     border-radius: 15px;
-    width: 25%;
+    width: 100%;
+    height: 360px;
+    background-size: cover !important;
 }
 .cafa-button {
     margin-top: 15px;
     margin-bottom: 20px;
 }
-.cafa {
-    margin-left: 30px;
-}
+
 .logos-card.three,
 .logos-card.two{
     margin-top: 15px;
@@ -843,22 +850,19 @@ a.button.button-2 i {
     padding-bottom: 20px;
     width: 95%;
 }
-ul.data li{
-    padding-right: 20px;
-}
 ul.data h6{
-    color: #cfcfcf;
+    color: #948787;
     font-size: 14px;
 }
 ul.data {
     display: flex;
     align-items: center;
-    border: 1px solid #F2F2F2;
+    justify-content: space-between;
+    border: 1px solid #948787;
     border-bottom: 0;
     border-left: 0;
     border-right: 0;
-    padding-top: 20px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 ul.data h6 i {
     padding-right: 10px;
@@ -873,6 +877,11 @@ ul.data h6 i {
 }
 .news-post-two img{
     border-radius: 20px;
+    width: 200px;
+    height: 200px;
+}
+.heigth-200 {
+    height: 200px !important;
 }
 .news-post-two .quickeat {
     position: relative;
@@ -1055,7 +1064,8 @@ ul.crumbs li {
     padding-right: 15px;
 }
 ul.crumbs li a{
-    color: #cfcfcf;
+    color: #302d2d;
+    font-size: 2em;
 }
 ul.crumbs li a i {
     padding-right: 10px;
@@ -1812,9 +1822,7 @@ header.two {
 
 }
 /*-------------            Service page        -------------*/
-.about-text a {
-    margin-top: 30px;
-}
+
 .counter-img img {
     border-radius: 30px;
     position: relative;
@@ -1858,13 +1866,13 @@ header.two {
 .hero-section-img-service:before {
     position: absolute;
     border: #e6b454 7px solid;
-    height: 616px;
+    height: 100%;
     width: 500px;
     content: "";
     border-radius: 70px;
     transform: rotate(24deg);
     z-index: 0;
-    left: 12%;
+    left: 10%;
 }
 /*services card*/
 .services-info h2{
@@ -2150,7 +2158,7 @@ ul.food-dishes li {
     top: 32%;
 }
 .bloc-content {
-    min-height: 68vh;
+    min-height: 28vh;
     align-items: center;
     justify-content: flex-start;
 }
@@ -2934,7 +2942,7 @@ label.checkbox-one {
     margin-top: 20px;
 }
 .hero-section.about {
-    padding-top: 140px;
+    padding: 60px 0px;
 }
 
 .hero-section.about.checkout {
@@ -3592,7 +3600,7 @@ li.menu-item-has-children.active {
     font-size: 20px;
     letter-spacing: 12px;
     color: #fff;
-    left:15%;
+    left: -15%;
 }
 .page-loader {
     z-index: 1111111111111;

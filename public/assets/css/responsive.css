@@ -162,9 +162,6 @@
         top: 8%;
         left: 8%;
     }
-    ul.data li {
-            padding-right: 13px;
-    }
     .join-img-blog img{
         width: 100%;
     }
@@ -255,14 +252,12 @@
     .restaurants-girl-img.food-photo-section a.for{
         top: 72%;
     }
-    .logos-card.restaurant-page {
+    /* .logos-card.restaurant-page {
         flex-wrap: wrap;
         justify-content: start;
-    }
-    .cafa{
-        margin-left: 0;
-    }
-    .logos-card img {
+    } */
+
+    .cover-competition {
         margin-bottom: 20px;
     }
     .counter-img img{
@@ -272,7 +267,7 @@
         width: 70%;
     }
     .hero-section-img-service:before {
-        height: 517px;
+        height: 100%;
         width: 484px;
     }
     .services-card-style{
@@ -407,9 +402,6 @@
     .subscribe-section.about .get-the-menu form i {
         left: 20%;
     }
-    ul.data li {
-        padding-right: 20px;
-    }
     .join-the{
         margin-left: 20px;
     }
@@ -477,7 +469,7 @@
         width: 87%;
     }
     .hero-section-img-service:before {
-        height: 454px;
+        height: 100%;
         width: 388px;
     }
     .services-info h2,.services-cards-text h2{
@@ -620,9 +612,6 @@
     }
     .team-description h4{
         font-size: 22px;
-    }
-    ul.data li {
-        padding-right: 8px;
     }
     .counter-blog .counter-img-data {
         width: 48%;
