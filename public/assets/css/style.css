@@ -115,21 +115,20 @@ figure {
 }
 .bloc-left-heros {
     border-bottom: 10px solid #e6b454;
-    min-height: 25vh;
     background: rgb(24,96,100);
     background: linear-gradient(169deg, #13575c, #257377);
     min-width: 80%;
     border-radius: 0 0 300px 300px;
     overflow: hidden;
 }
-.title-section, .titleTyping .titleH1 {
-    font-family: 'Permanent Marker', cursive;
-    font-weight: 400;
+.title-section, .titleH1 {
+    font-family: 'Permanent Marker', cursive !important;
+    font-weight: 400 !important;
     font-size: 5rem;
     color: white;
     font-style: italic;
 }
-.title-section span, .titleTyping .titleH1 .titleSpan {
+.title-section span, .titleH1 .titleSpan {
     color: #e6b454;
     font-weight: bolder;
     
@@ -397,6 +396,14 @@ select.nice-select + div.nice-select + div.nice-select {
     overflow: hidden;
     min-height: 50vh;
     position: relative;
+}
+.mobile-display {
+    display: none;
+    position: absolute;
+    bottom:12%;
+    left: 3%;
+    right: 3%;
+
 }
 .block-competitions{
     padding-top: 125px !important;

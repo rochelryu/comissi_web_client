@@ -117,6 +117,25 @@ const Index = () => {
                 >
                   <div className="bloc-left-heros flex flex-end flex-column">
                     <img className="img-inner" src={`${apiUrlAsset.competitions}/${competitions[indexSlider].imageMiss}`} alt="missAssets" srcset={`${apiUrlAsset.competitions}/${competitions[indexSlider].imageMiss}`} />
+                    <div className="mobile-display">
+                      <Typography variant="h1" className='titleH1'>
+                        <Typewriter
+                          onInit={(typewriter) => {
+                            typewriter.typeString(getFirstItineranceOnTitle(competitions[indexSlider].describe))
+                              .pauseFor(2000)
+                              .typeString(`<span class="titleSpan"> ${getLastItineranceOnTitle(competitions[indexSlider].describe)} </span>`)
+                              .callFunction(() => {
+                                setTimeout(nextSlide,10000)
+                              })
+                              .start();
+                          }}
+                        />
+                        </Typography>
+                        <div className="flex flex-center spacing-1 pt-130">
+                          <Link href={`/details-competitions/${competitions[indexSlider].id}/${competitions[indexSlider].title.toLocaleUpperCase()}`} className="button button-2">VOTER ICI</Link>
+                          <Link href={`/details-competitions/${competitions[indexSlider].id}/${competitions[indexSlider].title.toLocaleUpperCase()}`} className="button button-2">RESERVER UN TICKET</Link>
+                        </div>
+                    </div>
                   </div>
                 </div>
                 <div
@@ -126,34 +145,36 @@ const Index = () => {
                   data-aos-duration={400}
                 >
                   <div className="flex flex-column bloc-content titleTyping spacing-3">
-                    <Typography variant="h1" className='titleH1'>
-                      <Typewriter
-                        onInit={(typewriter) => {
-                          typewriter.typeString(getFirstItineranceOnTitle(competitions[indexSlider].describe))
-                            .pauseFor(2000)
-                            .typeString(`<span class="titleSpan"> ${getLastItineranceOnTitle(competitions[indexSlider].describe)} </span>`)
-                            .callFunction(() => {
-                              setTimeout(nextSlide,10000)
-                            })
-                            .start();
-                        }}
-                      />
-                      </Typography>
-                    <div className="flex flex-center spacing-1">
-                      <Link href={`/details-competitions/${competitions[indexSlider].id}/${competitions[indexSlider].title.toLocaleUpperCase()}`} className="button button-2">VOTER ICI</Link>
-                      <Link href={`/details-competitions/${competitions[indexSlider].id}/${competitions[indexSlider].title.toLocaleUpperCase()}`} className="button button-2">RESERVER UN TICKET</Link>
+                    <div className="desktop-display">
+                      <Typography variant="h1" className='titleH1'>
+                        <Typewriter
+                          onInit={(typewriter) => {
+                            typewriter.typeString(getFirstItineranceOnTitle(competitions[indexSlider].describe))
+                              .pauseFor(2000)
+                              .typeString(`<span class="titleSpan"> ${getLastItineranceOnTitle(competitions[indexSlider].describe)} </span>`)
+                              .callFunction(() => {
+                                setTimeout(nextSlide,10000)
+                              })
+                              .start();
+                          }}
+                        />
+                        </Typography>
+                      <div className="flex flex-center spacing-1">
+                        <Link href={`/details-competitions/${competitions[indexSlider].id}/${competitions[indexSlider].title.toLocaleUpperCase()}`} className="button button-2">VOTER ICI</Link>
+                        <Link href={`/details-competitions/${competitions[indexSlider].id}/${competitions[indexSlider].title.toLocaleUpperCase()}`} className="button button-2">RESERVER UN TICKET</Link>
+                      </div>
                     </div>
                     <div className="clock-sys">
-                    <FlipClockCountdown
-                      to={new Date(competitions[indexSlider].events[0].endDate).getTime()}
-                      labels={['Jours', 'Heures', 'Minutes', 'Secondes']}
-                      labelStyle={{ fontSize: 20, fontWeight: 500, textTransform: 'uppercase' }}
-                      digitBlockStyle={{ width: 50, height: 60, fontSize: 30, backgroundColor: '#816b3a' }}
-                      dividerStyle={{ color: 'transparent', height: 1 }}
-                      separatorStyle={{ color: 'transparent', size: '6px' }}
-                      duration={0.5}
-                    >
-                    </FlipClockCountdown>
+                      <FlipClockCountdown
+                        to={new Date(competitions[indexSlider].events[0].endDate).getTime()}
+                        labels={['Jours', 'Heures', 'Minutes', 'Secondes']}
+                        labelStyle={{ fontSize: 20, fontWeight: 500, textTransform: 'uppercase' }}
+                        digitBlockStyle={{ width: 50, height: 60, fontSize: 30, backgroundColor: '#816b3a' }}
+                        dividerStyle={{ color: 'transparent', height: 1 }}
+                        separatorStyle={{ color: 'transparent', size: '6px' }}
+                        duration={0.5}
+                      >
+                      </FlipClockCountdown>
                     </div>
                   </div>
                 </div>

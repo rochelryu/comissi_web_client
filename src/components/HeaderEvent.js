@@ -31,7 +31,7 @@ const HeaderEdition = ({item}) => {
                                 item.tickets.map((ticket) => (
                                     <div
                                     key={`ticket-${ticket.priceTicket}`}
-                                    className="col-xl-4 col-lg-4 col-md-4 col-sm-6"
+                                    className="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6"
                                     data-aos="flip-up"
                                     style={{marginTop: 10}}
                                     data-aos-delay={300}
